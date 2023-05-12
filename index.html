@@ -1,160 +1,116 @@
----
-layout: default
----
+<html>
 
-<div class="page clearfix" index>
-    <div class="left">
-        <h1>欢迎来到永恒花园 </h1>
-        <small>我们总要不断地强迫我们自己去思考，正是像这样，思想驱使我们摆脱落后。</small>
-        <hr>
-        <ul>
-            {% for post in paginator.posts %}
-              <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
-                    </div>
-                    <div class="label-card">
-                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
-                        {% endif %}
-                    </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
+<head></head>
 
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include tag.html %}
-                    </div>
-                </div>
-                <div class="excerpt">
-                    {{post.excerpt}}
-                </div>
-                <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            {% endfor %}
-        </ul>
-
-
-
-        <!-- Pagination links -->
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
-          {% else %}
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
-          {% endif %}
-          <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
-          {% else %}
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
-          {% endif %}
-        </div>
-    </div>
-    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
-    <div class="right">
-        <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
+<body>
+    <ul>
+        <li><a href="#home" class="active">主页</a></li>
+        <li>
+            <div class="dropdown"> <a href="#" class="dropbtn">未知</a>
+                <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
             </div>
-
-            <!-- Content -->
-            <div class="side ">
-                <div>
-                    <i class="fa fa-th-list"></i>
-                    Categories
-                </div>
-                <ul class="content-ul" cate>
-                    {% for category in site.categories %}
-                    <li>
-                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
+        </li>
+        <li>
+            <div class="dropdown"> <a href="#" class="dropbtn">未知</a>
+                <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
             </div>
-            <!-- 其他div框放到这里 -->
-            <div class="side">
-                <div>
-                    <i class="fa fa-tags"></i>
-                    Tags
-                </div>
-                <div class="tags-cloud">
-                    {% assign first = site.tags.first %}
-                    {% assign max = first[1].size %}
-                    {% assign min = max %}
-                    {% for tag in site.tags offset:1 %}
-                      {% if tag[1].size > max %}
-                        {% assign max = tag[1].size %}
-                      {% elsif tag[1].size < min %}
-                        {% assign min = tag[1].size %}
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if max == min %}
-                        {% assign diff = 1 %}
-                    {% else %}
-                        {% assign diff = max | minus: min %}
-                    {% endif %}
-
-                    {% for tag in site.tags %}
-                      {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
-                      {% assign base = temp | divided_by: 4 %}
-                      {% assign remain = temp | modulo: 4 %}
-                      {% if remain == 0 %}
-                        {% assign size = base | plus: 9 %}
-                      {% elsif remain == 1 or remain == 2 %}
-                        {% assign size = base | plus: 9 | append: '.5' %}
-                      {% else %}
-                        {% assign size = base | plus: 10 %}
-                      {% endif %}
-                      {% if remain == 0 or remain == 1 %}
-                        {% assign color = 9 | minus: base %}
-                      {% else %}
-                        {% assign color = 8 | minus: base %}
-                      {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
-                    {% endfor %}
-                </div>
+        </li>
+        <li>
+            <div class="dropdown"> <a href="#" class="dropbtn">未知</a>
+                <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
             </div>
+        </li>
+        <li>
+            <div class="dropdown"> <a href="#" class="dropbtn">未知</a>
+                <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
+            </div>
+        </li>
+        <li>
 
-            <!-- <div class="side">
-                <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
-                </div>
-                <ul  class="content-ul">
+            <div class="dropdown"> <a href="#" class="dropbtn">未知</a>
+                <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
+            </div>
+        </li>
+    
+        <li><a href="#about">关于</a></li>
+    </ul>
+    <h1>不劳而获的自由</h1>
+    <p>在法农看来，殖民地人口内部缺乏凝聚力，每个主体都无法将自己构成为一个自我，以及殖民地主体普遍无法将自己构成为一个为自由而斗争的群体，这意味着从外部赋予他们的自由基本上是没有意义的。法农坚持认为，仅仅像法国国家那样宣布 "奴隶制在法国土地上将不再存在"，是无法实现承认的。这相当于''有一天，一个很有影响力的白人主人对他的朋友说：'让我们善待黑鬼吧''.</p>
+    
+    <p>法农指出，如此赋予的''自由''的问题，以及它没有被当作自由的原因是，''动乱从外部到达了黑人。黑人受到了影响，但骚乱没有区分黑人''。对白人来说，宣布平等只是在一个象征性的领域内进行，而这个领域的权威恰恰来自于对黑人的奴役。也就是说，只有在这种自由表现在殖民主体的自我理解中时，宣布殖民主体的自由才有意义。然而，这就是问题所在，自由作为自我理解的性质决定了自由必须通过自我整合的过程来赢得。自由必须在构成自我意识与规范性本身的基本关系的意义上辩证地赢得。</p>
 
-                </ul>
-            </div> -->
-        </div>
-    </div>
-</div>
-<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+    <p>为了获得自由，殖民主体必须知道她为什么是自由的，而这只有在她使自己成为自由的情况下才会发生。简单地被赋予自由，显然不能满足这个条件。相反，如果殖民主体没有使自己获得自由，而且正如法农所写的，"不确定白人是否把他看作是意识中的自我，他就会不断地预先忙于探测抵抗、反对和争论"这一点揭示了自由关系的模糊性--也就是说，即使是被剥夺了自由的人也不能赋予它。自由，作为主体性的最深层的一面，是永远存在的东西，但也是永远有问题的。自由是一个人的东西，不是一个人的一套权利。"</p>
+    <style>
+        ul {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+             background-color: #e4afb8;
+             overflow: hidden;
+             /*        注意: overflow:hidden 添加到 ul 元素,以防止 li 元素列表的外出(当li{float:left}时)。         来源链接：https://www.runoob.com/try/try.php?filename=trycss_navbar_horizontal_float&basepath=0        */
+         }
+        
+         li {
+             float: left;
+         }
+        
+         li a {
+             color: white;
+             padding: 14px 16px;
+             display: inline-block;
+             text-decoration: none;
+         }
+        
+         li>a.active {
+             background-color:#a0aae4 ;
+         }
+        
+         li>a:hover:not(a.active),
+         .dropbtn:hover {
+             background-color: #f2b7d2;
+         }
+        
+         .dropdown-content {
+             display: none;
+             position: absolute;
+             /* 默认相对于<html>进行绝对定位 */
+             background-color: #e695a0;
+             min-width: 100px;
+             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+         }
+        
+         .dropdown-content a {
+             color: white;
+             display: block;
+             /* 因为<a>标签不是块元素，min-width:100px不会生效 */
+         }
+        
+         .dropdown-content a:hover {
+             background-color: white;
+             color: #8ed1ee;
+         }
+        
+         .dropdown:hover .dropdown-content {
+             display: block;
+         }
+        
+         /* 中间的空格表示，鼠标悬念在.dropdown上时，dropdown的子元素.dropdown-content变为块元素 */
+         /* ### 待完善 ###   
+            因为.dropdown只用过一次，觉得可以删除<div class="dropdown"></div>来减少代码量，尝试  将.dropdown:hover .dropdown-content {display: block;} 修改为.dropbtn:hover+.dropdown-content {display: block;} 并删除<div class="dropdown"></div>后，鼠标悬停在“下拉菜单”上，会显示下拉菜单， 但无法选中菜单中的“链接 x”， ### 为什么？该如何完善？ ###    
+         */
+         body {
+	background-color:#d0e4fe;
+}
+h1 {
+	color: #471fa5;;
+	text-align:center;
+}
+p {
+	font-family:"Times New Roman";
+	font-size:20px;
+}
+
+    </style>
+</body>
+
+</html>
