@@ -5,7 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Le Jardin Èternel写作页面</title>
-
+        <link rel="stylesheet" href="editormd/css/editormd.css" />
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script src="editormd/editormd.min.js"></script>
+                 
         </head>
  <body>
     
@@ -41,15 +44,28 @@
       
       
      
-    <main>
-        <article class="article">
-            <h1> </h1>
-            
-           
-            
-            
-        </main>
+    
+        <div id="test-editor">
+          <textarea style="display:none;"></textarea>
+        </div>
+          
+          
+        <script src="editormd/editormd.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var editor = editormd("test-editor", {
+                    width: "100%",
+                    height: 600,
+                    path: "/editormd/lib/", //依赖lib文件夹路径
+                });
+            });
+        </script>
+        
+          
 
+            
+            
+       
 
     
 
@@ -61,14 +77,10 @@
 
 
       
-        <footer class="footer">
-           
-          <a href="#">点击跳转至顶部 
-         </a>
-        
+       
  
            
-         </footer>
+         
           
 </body>
   
