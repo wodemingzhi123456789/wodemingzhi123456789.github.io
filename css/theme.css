@@ -45,10 +45,12 @@ text-indent:50px;
 
 .main {
     
-        height: ;
-        width: 80%;
-        background-color: powderblue;
-      
+    
+    margin-right: 5%;
+    margin-left: 5%;
+        border-style: dotted;
+        border-width: 2px;
+
 
 }
 
