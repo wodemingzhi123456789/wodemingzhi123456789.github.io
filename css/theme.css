@@ -43,10 +43,16 @@ text-indent:50px;
     width: 100%;
 }
 
- .article {
- width: 80%;
- }
- 
+.main {
+    
+        height: ;
+        width: 80%;
+        background-color: powderblue;
+      
+
+}
+
+
 .article h1 {
     color: #471fa5;
     font-size:40px;
