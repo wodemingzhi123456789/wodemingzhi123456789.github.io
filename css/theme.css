@@ -95,7 +95,7 @@ text-indent:50px;
                     text-indent:2em;
                     line-height: 40px;
                     letter-spacing: 17px;
-                    word-spacing: ;
+                    word-spacing: 17px;
 }         
 
 .article pre {
@@ -104,6 +104,9 @@ text-indent:50px;
               text-indent:2em;
               line-height: 40px;
               letter-spacing: 17px;
+              word-spacing: 17px;
+
+
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
