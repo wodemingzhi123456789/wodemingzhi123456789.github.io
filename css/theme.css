@@ -57,6 +57,24 @@ text-indent:50px;
 
 
 }
+.mains h1 {
+    color: #471fa5;
+    font-size:40px;
+    text-align:center;
+
+}
+
+.li1 {
+
+    font-size: 28px;
+    color: rgb(168, 115, 187);
+
+}
+.li2 {
+    font-size: 20px;
+
+
+}
  
 
 .article h1 {
@@ -75,14 +93,14 @@ text-indent:50px;
     font-family:"Times New Roman";
                     font-size:20px;
                     text-indent:2em;
-                    line-height: 30px;
+                    line-height: 40px;
 }         
 
 .article pre {
     font-family:"Times New Roman";
               font-size:20px;
               text-indent:2em;
-              line-height: 30px;
+              line-height: 40px;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
