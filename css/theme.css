@@ -1,5 +1,6 @@
 .hphts img {
     width:100%
+    height:auto ;
      
      }
 
@@ -45,13 +46,13 @@ text-indent:50px;
 
 .mains {
        width: 80%;
-       
+       height:auto;
 	
        left: 10%;
 	   right: 10%;
        bottom: 0;
        top: 0;
-       background-color: rgb(142, 175, 204);
+       background-color: rgb(208, 229, 247);
 
     
     
@@ -77,14 +78,14 @@ text-indent:50px;
     font-family:"Times New Roman";
                     font-size:20px;
                     text-indent:2em;
-                    line-height: 15px;
+                    line-height: 30px;
 }         
 
 .article pre {
     font-family:"Times New Roman";
               font-size:20px;
               text-indent:2em;
-              line-height: 15px;
+              line-height: 30px;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
