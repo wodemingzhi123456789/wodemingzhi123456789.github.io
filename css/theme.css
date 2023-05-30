@@ -44,8 +44,15 @@ text-indent:50px;
 }
 
 .mains {
-       width: 1000px;
+       width: ;
+       margin: auto;
+	position: absolute;
+       left: 5%;
+	   right: 5%;
+       bottom: 0;
+       top: 0;
        background-color: rgb(137, 177, 211);
+
     
     
        
