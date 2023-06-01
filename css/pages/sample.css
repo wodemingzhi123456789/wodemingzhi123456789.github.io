@@ -1,7 +1,7 @@
 
 .body {
   width: 100%;
-  height: 100%;
+  height: ;
   background-image: url("../../pages/sample.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,10 +12,10 @@
 
 .sample {
   position: relative;
-  width: 75%%;
+  width: 70%;
   height: ;
   background: inherit;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 5vmin;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.5);
