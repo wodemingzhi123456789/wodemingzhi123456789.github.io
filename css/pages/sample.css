@@ -6,12 +6,12 @@
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: relative;
+  background-position: ;
   overflow: hidden;
 }
 
 .sample {
-  position: relative;
+  position: ;
   width: 70%;
   height: ;
 
@@ -23,7 +23,7 @@
 }
 
 .sample p {
-  position: relative;
+  position: ;
   font-family:"Times New Roman";
   text-indent:2em;
   line-height: 40px;
@@ -39,7 +39,7 @@
     color: #471fa5;
     font-size:40px;
     text-align:center;
-    position: relative;
+   
 
 
 }
@@ -48,7 +48,7 @@
     color: #9c84d3;
     font-size:23px;
     text-align:left;
-    position: relative;
+   
 
 
 }
@@ -60,7 +60,7 @@
               letter-spacing: 5px;
               word-spacing: 8px;
 
-              position: relative;
+              
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
