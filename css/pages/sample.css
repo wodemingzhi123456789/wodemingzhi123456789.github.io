@@ -4,7 +4,7 @@
   height: ;
   background-image: url("../../pages/sample.jpg");
   background-repeat: repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   background-position: relative;
   overflow: hidden;
@@ -19,6 +19,7 @@
   padding: 5vmin;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
 }
 
 .sample p {
