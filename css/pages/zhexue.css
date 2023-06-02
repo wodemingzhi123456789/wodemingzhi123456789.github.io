@@ -1,0 +1,73 @@
+
+.body {
+    width: 100%;
+    height: ;
+    background-image: url("../../pages/sample.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: ;
+    overflow: hidden;
+  }
+  
+  .sample {
+    position: ;
+    width: 70%;
+    height: ;
+  
+    margin: 50px auto;
+    padding: 5vmin;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    filter: blur(px);
+  }
+  
+  .sample p {
+    position: ;
+    font-family:"Times New Roman";
+    text-indent:2em;
+    line-height: 40px;
+    letter-spacing: 5px;
+    word-spacing: 8px;
+    color: #000;
+    z-index: 10;
+    font-size: 24px;
+  
+  }
+   
+  .sample h1 {
+      color: #471fa5;
+      font-size:40px;
+      text-align:center;
+     
+  
+  
+  }
+  .sample h2 {
+  
+      color: #9c84d3;
+      font-size:23px;
+      text-align:left;
+     
+  
+  
+  }
+  .sample pre {
+      font-family:"Times New Roman";
+                font-size:20px;
+                text-indent:2em;
+                line-height: 40px;
+                letter-spacing: 5px;
+                word-spacing: 8px;
+  
+                
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    *word-wrap: break-word;
+    *white-space : normal ;
+  
+  
+  }
+  
