@@ -1,0 +1,48 @@
+.body {
+    margin: 0px;
+    background-color: #ad97df;
+    background: no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+
+}
+
+.div {
+    width: 80%;
+       height:auto;
+	    margin: auto;
+        padding: 20px 18px;
+        background-color: rgb(238, 245, 245,0.7);
+
+}
+
+.pre h1 {
+          color: #471fa5;
+        font-size:40px;
+        text-align:center;
+    
+    }
+.pre h2 {
+   
+        color: #9c84d3;
+        font-size:23px;
+        text-align:left;
+    
+    
+}
+
+.pre { font-family:"Times New Roman";
+font-size:20px;
+text-indent:2em;
+line-height: 40px;
+letter-spacing: 5px;
+word-spacing: 8px;
+
+
+white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+*word-wrap: break-word;
+*white-space : normal ;
+}
