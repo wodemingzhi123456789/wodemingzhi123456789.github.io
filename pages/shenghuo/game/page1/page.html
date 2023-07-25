@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> 逆水寒假奏 </title>
+      
+      </head>
+      
+    
+               
+          
+<body>
+    <div id="videoBtn" style="max-width:500px;">
+        <video controls="false"  muted="muted" id="video1" name="media" style="width:500px; height: 200px;">
+            <source src="梨梨梨谱-迢迢.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        var myVideo = document.getElementById("video1");
+        var videoBtn = document.getElementById("videoBtn");
+        myVideo.loop = true
+        videoBtn.onmouseleave = function () {
+            myVideo.pause();
+        }
+        videoBtn.onmousemove = function () {
+            myVideo.play();
+        }
+        function getVideoTime() {
+            if (document.getElementById('video1')) {
+                let videoPlayer = document.getElementById('video1');
+                videoPlayer.addEventListener('timeupdate', function () {
+                    console.log(`当前的时间点是${videoPlayer.currentTime},视频长度是${videoPlayer.duration}`);
+                    if (videoPlayer.currentTime > 11) {
+                        myVideo.pause();
+                        videoPlayer.currentTime = 0
+                    }
+                }, false)
+            }
+        }
+        getVideoTime();
+    </script>
+
+      </body>
+</html>
